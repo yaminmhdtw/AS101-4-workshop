@@ -9,4 +9,6 @@ fileignoreconfig:
   checksum: 1b8618d11501a9f2e6f3beaa1a2deb2c0234ca9db85fd4bf5a858e37e5fd0761
 - filename: .github/workflows/lint_test.yml
   checksum: 3576b564f98e2cc19f919fbfa0c26ac81a3bd27b8783897c1fdbd9421568d9ca
+- filename: env_secrets
+  checksum: 43d6f364f6eaf0991504f10dbfa32afe79ea74711a722a57bc89443b8fe63bcb
 version:
