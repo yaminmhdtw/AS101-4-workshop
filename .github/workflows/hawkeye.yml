@@ -1,6 +1,10 @@
-name: Hawkeye # <Name your workflow>
+# This is a basic workflow to help you get started with Actions
+
+name: Hawkeye Scan
+
 # Controls when the action will run. Triggers the workflow on push or pull request on any branch
 on: [push, pull_request]
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "scan"
@@ -18,9 +22,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: build docker containers
-        run: |
-          docker-compose build
-      - name: run hawkeye scan
-        run: |
-          docker run --rm -v "$PWD/web:/target" hawkeyesec/scanner-cli:latest
+      # Runs a set of commands using the runners shell
+      - run: hawkeye scan --target web/
