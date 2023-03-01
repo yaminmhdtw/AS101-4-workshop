@@ -1,0 +1,6 @@
+fileignoreconfig:
+- filename: hawkeye.log
+  checksum: fc243bd6f7ee59b836104d5027525ffc4501b20e31478f2df06e44e7cbd3bfc2
+- filename: .github/workflows/hawkeye.yml
+  checksum: c0b66929d310c926222f6f7d194d4fc55b2a96e369523e918a3c0d9b37861484
+version:
