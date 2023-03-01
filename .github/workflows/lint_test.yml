@@ -15,6 +15,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     #triggers actions prep for getting secrets from vault
+    - uses: actions/checkout@v2
     - uses: ./.github/actions/prep
       env:
         VAULT_PASS: ${{ secrets.VAULT_PASS }}
@@ -24,7 +25,6 @@ jobs:
         echo "::add-mask::$POSTGRES_PASSWORD"
         echo "::add-mask::$POSTGRES_DB"
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
     - name: build docker containers
       run: |
         docker-compose build
